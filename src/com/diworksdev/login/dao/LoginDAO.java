@@ -1,8 +1,9 @@
-package com. diworksdev.login.dao;
+package com.diworksdev.login.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 import com.diworksdev.login.dto.LoginDTO;
 import com.diworksdev.login.util.DBConnector;
 
@@ -15,7 +16,7 @@ public class LoginDAO {
 		String sql = "select * from user where user_name=? and password=?";
 		
 		try {
-			PreparedStatment ps = con.prepareStatement(sql);
+			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1,name);
 			ps.setString(2,password);
 			
